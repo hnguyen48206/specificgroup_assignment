@@ -1,0 +1,19 @@
+{
+  "permissions":[
+    "admin.user-management.create",
+    "admin.user-management.edit",
+    "admin.user-management.delete",
+    "admin.user-management.read",
+    "admin.roles.create",
+    "admin.roles.edit",
+    "admin.roles.delete",
+    "admin.roles.read",
+    "admin.messages.create",
+    "admin.messages.edit",
+    "admin.messages.delete",
+    "admin.messages.read",
+    "ai-service.translation.read",
+    "ai-service.agents.read",
+    "ai-service.agents.delete"
+  ]
+}
