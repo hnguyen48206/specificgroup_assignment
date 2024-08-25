@@ -1,8 +1,11 @@
 import { Routes } from '@angular/router';
 import { PermissionComponent } from './permission/permission.component';
 import { PostComponent } from './posts/post/post.component';
-import { provideStore } from '@ngrx/store';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
 import { postReducer } from './posts/state/post.reducer';
+import { PostEffect } from './posts/state/post.effect';
+import { importProvidersFrom } from '@angular/core';
 
 export const routes: Routes = [
   { path: 'permission', component: PermissionComponent },
@@ -10,9 +13,8 @@ export const routes: Routes = [
     path: 'post',
     component: PostComponent,
     providers: [
-      provideStore({
-        posts: postReducer,
-      }),
+      importProvidersFrom(StoreModule.forFeature('posts', postReducer)),
+      importProvidersFrom(EffectsModule.forFeature([PostEffect])),
     ],
   },
   { path: '', redirectTo: 'permission', pathMatch: 'full' },

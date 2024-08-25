@@ -4,24 +4,50 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `ng serve -o` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Assignment Completeness Note
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+•
+Setup and Initialization: Create the basic Angular application and ensure all necessary
+dependencies are installed. --> Done
 
-## Build
+•
+Posts Management Page:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+•
+View Posts: Implement the table to display posts. --> Done
 
-## Running unit tests
+•
+Add Post: Implement the form and functionality to add a new post. --> Interface Created
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+•
+Edit Post: Implement the functionality to edit an existing post. --> Not yet implemented
 
-## Running end-to-end tests
+•
+Delete Post: Implement the functionality to delete a post. --> not yet implemented
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+•
+Search Posts: Implement the debounced search feature. --> Done
 
-## Further help
+•
+Permissions Page:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+•
+Render Tree: Implement the checkbox tree rendering based on the provided
+permission strings. --> Done
+
+•
+Checkbox Behavior: Implement the logic for checking/unchecking behavior. --> Done
+
+•
+Output Permissions: Implement the logging of selected permissions. --> The output is shown in browser console.
+
+•
+Navigation: Implement a simple navbar/header and sidebar for route navigation. --> Done
+
+•
+Error Handling: Implement error handling for API calls. --> Handled by showing toast message.
+
+•
+Testing: Write unit tests to cover the implemented functionality. --> Not yet

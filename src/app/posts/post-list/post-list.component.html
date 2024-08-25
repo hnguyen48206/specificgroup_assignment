@@ -1,3 +1,14 @@
+<div class="relative overflow-x-auto" style="width: 30%">
+  <input
+    type="text"
+    class="border rounded p-2 w-full"
+    placeholder="Search..."
+    (input)="onSearch($event)"
+    [(ngModel)]="searchTerm"
+  />
+  <button class="absolute right-2 top-2" (click)="clearSearch()">✕</button>
+</div>
+
 <div class="relative overflow-x-auto">
   <table
     class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
@@ -15,7 +26,7 @@
     <tbody>
       <tr
         class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
-        *ngFor="let post of posts"
+        *ngFor="let post of filteredData"
       >
         <td class="px-6 py-4">{{ post.id }}</td>
         <td class="px-6 py-4">{{ post.title }}</td>
@@ -24,8 +35,9 @@
           <a
             href="#"
             class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-            >Edit</a
-          >
+            >Edit
+          </a>
+          <b> | </b>
           <a
             href="#"
             class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
@@ -35,4 +47,10 @@
       </tr>
     </tbody>
   </table>
+  <app-pagination
+    id="pagination"
+    [totalItems]="totalItems"
+    [itemsPerPage]="itemsPerPage"
+    (pageChange)="onPageChange($event)"
+  ></app-pagination>
 </div>

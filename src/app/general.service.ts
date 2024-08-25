@@ -4,16 +4,16 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class GeneralService {
-  permissions = [];
   constructor() {}
 
   loadPermission() {
-    const req = new XMLHttpRequest();
-    req.open('GET', `/permissions.json`);
-    req.onload = () => {
-      this.permissions = JSON.parse(req.response).permissions;
-      console.log('Config from file: ', this.permissions);
-    };
-    req.send();
+    return new Promise((resolve, reject) => {
+      const req = new XMLHttpRequest();
+      req.open('GET', `/permissions.json`);
+      req.onload = () => {
+        return resolve(JSON.parse(req.response).permissions);
+      };
+      req.send();
+    });
   }
 }

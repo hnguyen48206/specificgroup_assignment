@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PostEditComponent } from './post-edit.component';
+import { PaginationComponent } from './pagination.component';
 
-describe('PostEditComponent', () => {
-  let component: PostEditComponent;
-  let fixture: ComponentFixture<PostEditComponent>;
+describe('PaginationComponent', () => {
+  let component: PaginationComponent;
+  let fixture: ComponentFixture<PaginationComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PostEditComponent]
+      imports: [PaginationComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PostEditComponent);
+    fixture = TestBed.createComponent(PaginationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

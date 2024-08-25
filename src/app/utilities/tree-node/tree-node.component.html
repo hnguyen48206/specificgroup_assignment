@@ -1,0 +1,22 @@
+<li>
+  <div class="flex items-center">
+    <input
+      type="checkbox"
+      class="mr-2"
+      [checked]="isChecked"
+      [indeterminate]="isIndeterminate"
+      (change)="toggleSelection(node)"
+    />
+    {{ node.name }}
+  </div>
+  <ul *ngIf="node.children">
+    <ng-container *ngFor="let child of node.children">
+      <app-tree-node
+        [node]="child"
+        [parentPath]="parentPath ? parentPath + '.' + node.name : node.name"
+        [selectedPermissions]="selectedPermissions"
+        (toggle)="toggle.emit($event)"
+      ></app-tree-node>
+    </ng-container>
+  </ul>
+</li>

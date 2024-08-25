@@ -1,0 +1,11 @@
+<div class="p-4">
+  <ul>
+    <ng-container *ngFor="let node of treeData">
+      <app-tree-node
+        [node]="node"
+        [selectedPermissions]="selectedPermissions"
+        (toggle)="toggleSelection($event)"
+      ></app-tree-node>
+    </ng-container>
+  </ul>
+</div>
